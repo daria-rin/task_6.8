@@ -1,0 +1,16 @@
+body {
+    font-family: sans-serif;
+}
+
+button {
+    background-color: white;
+    color: black;
+    border: 3px solid #b94ed1;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #b94ed1;
+    color: white;
+    border-radius: 4px;
+}
