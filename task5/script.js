@@ -1,18 +1,14 @@
-//let input = document.querySelector('.input').value;
-//let TextField = document.querySelector('#duplicateField');
-//TextField.addEventListener('keydown', 
-//  (event) => {
-//    TextField.textContent = input.value;
-//})
+const inputText = document.getElementById('inputText')
+const duplicateField = document.getElementById('duplicateField')
+const clearForm = document.getElementById('clearForm')
 
-document.querySelector('button').onclick = myClick;
-function myClick(){
-    let a = document.querySelector('.input').value;
-    console.log(a);
+inputText.oninput = function() {
+  duplicateField.textContent = inputText.value
 }
 
-document.querySelector('[type="submit"]').addEventListener('click', function(event) {
-    if (!confirm('Вы точно хотите вывести текст в консоль и очистить поля?')) {
-      event.preventDefault();
-    }
-  });
+clearForm.addEventListener('click', function(event) {
+  console.log(inputText.value);
+  inputText.value = '';
+  duplicateField.textContent = '';
+  event.preventDefault();
+})
